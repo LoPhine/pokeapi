@@ -1,5 +1,5 @@
-import React from 'react';
-import { Component } from 'react';
+
+import React, { useState } from 'react';
 
 // Importando o materiaze
 
@@ -14,37 +14,8 @@ import Carrosel from './components/layout/Carrosel'
 
 
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      pokemons: [],
-    }
-  }
-
-  componentDidMount() {
-    let url = "https://pokeapi.co/api/v2/pokemon";
-    fetch(url)
-      .then(response => response.json())
-      .then(data => {
-        if (data) {
-          this.setState({ pokemons: data.results }, () => { })
-        }
-      })
-      .catch(console.log)
-  }
-
-  render() {
-    const { pokemons } = this.state;
-
-    const renderedPokemonList = pokemons.map((pokemon, index) => {
-      return (
-        <div className="card text-center mx-auto" style={{ "maxWidth": "18rem" }} key={pokemon.id}>
-          <div className="card-header"><b>{pokemon.name} : {pokemon.url}</b></div>
-        </div>
-      );
-    });
-
+function App(props){
+  
     return (
 
       <div className="Navbar">
@@ -72,7 +43,7 @@ class App extends Component {
       </div>
 
     );
-  }
+  
 }
 
 export default App;

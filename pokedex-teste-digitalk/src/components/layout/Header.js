@@ -12,7 +12,7 @@ const Header = () => {
     return (
         <nav>
             <div class="nav-wrapper #e53935 red darken-1">
-                <a href="#" class="brand-logo">Pokédex Digitalk</a>
+                <a href="#" class="brand-logo">Pokédex </a>
                 <ul id="nav-mobile" class="right">
                     <li><a href="#">x</a></li>
                     <li><a href="#">x</a></li>
